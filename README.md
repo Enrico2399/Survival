@@ -45,12 +45,38 @@ Gioco browser single-player in stile "survivors-like" (bullet heaven, genere Vam
 **Non ancora implementato (segnalato, non dimenticato):**
 - Object pooling per proiettili/particelle/testi di danno — valutato a basso guadagno rispetto al rischio, dato che gli array coinvolti sono già piccoli e limitati e il vero collo di bottiglia (shadowBlur) è stato risolto altrove. Da fare su richiesta.
 
-## Correzioni UI (13/11)
+## Nuove feature (seconda ondata di implementazione)
 
-- **Santuario, icona struttura tagliata in basso**: il nodo della struttura posizionato in basso nell'esagono finiva nascosto/tagliato dietro la barra flottante "Riscatta risorse" sovrapposta al canvas, soprattutto con il riquadro all'altezza minima (210px). Ora viene riservato esplicitamente lo spazio per quella barra e l'intero layout delle strutture viene centrato solo nell'area libera rimanente.
-- **Pop-up a lato sinistro illeggibile a metà (carte di livello)**: il badge numerico (1/2/3) che indica la scorciatoia da tastiera sulle carte di livello era posizionato parzialmente fuori dal bordo della card (`-top-2 -left-2`); il contenitore scorrevole delle carte taglia l'overflow orizzontale, quindi sulla prima carta a sinistra meta' del badge spariva. Spostato dentro i bordi della card (`top-2 left-2`), ora è sempre interamente visibile.
-- **Pop-up in alto a sinistra tagliato a metà, poi sparisce (eventi/reliquie durante il gioco)**: il banner che compare quando raccogli una reliquia o scatta un evento (orda, boss, fusione...) è gia' centrato orizzontalmente dal suo contenitore, ma l'animazione di comparsa/scomparsa applicava ANCHE lei uno spostamento di meta' larghezza verso sinistra sul singolo banner: il doppio spostamento lo faceva apparire spostato verso l'angolo alto-sinistro e tagliato, invece che centrato in alto. Rimosso lo spostamento orizzontale superfluo dall'animazione: ora il banner compare e scompare centrato, senza spostamenti laterali.
+**Nuovi contenuti di gioco:**
+- Nuovo incantesimo base: **Aura Glaciale** (danno ad area attorno al giocatore + rallenta i nemici colpiti)
+- Due nuovi tipi di nemico: **Dasher** (carica a scatti ad alta velocità) e **Splitter** (alla morte si divide in 2 Ombre più deboli)
+- Varianti dei Guardiani (mini-boss): oltre al classico corpo a corpo, ora possono essere **a carica** o **a distanza** (questi ultimi telegrafano ed eseguono attacchi ad area a terra)
+- **Boss finale** che compare al minuto 12 di ogni run, con una seconda fase (si attiva sotto il 50% di vita) che intensifica l'attacco
+- 7ª struttura del Santuario: **Cristallo dell'Eco**, genera sia Essenza che Frammenti d'Anima
+- Palette visiva di sfondo che cambia ogni 3 minuti di run (puramente estetico, nessun impatto sul bilanciamento)
+
+**Feedback e qualità della vita:**
+- Screen-shake e leggero "hit-stop" (rallentamento di un istante) su colpi critici e uccisioni di boss
+- Scia luminosa dietro ai proiettili
+- Vibrazione del dispositivo estesa a più eventi di gioco (mobile)
+- Riepilogo dettagliato di fine run: danno inflitto per arma, nemici uccisi per tipo
+- Storico delle scelte di livello (quali potenziamenti/fusioni hai preso) consultabile in pausa
+- Classifica locale (Top 5) delle run migliori, salvata sul dispositivo
+
+**Accessibilità:**
+- Interruttore "Riduci bagliore" (disattiva gli effetti `shadowBlur` per chi preferisce un'interfaccia più sobria o ha un dispositivo meno potente)
+- Slider per la scala dell'interfaccia (HUD) in gioco
+
+**Non implementato in questa ondata (valutato ma rimandato per invasività/rischio rispetto al tempo disponibile — fattibile su richiesta):**
+- Arma turret (torretta stazionaria)
+- Missioni giornaliere
+- Sistema di prestigio/ascensione
+- Codice di run seminato e condivisibile
+
+## Verifiche effettuate
+
+Testato con una simulazione accelerata di un'intera run da 15 minuti (oltre la comparsa del boss finale) e con emulazione di viewport/touch mobile: nessun errore riscontrato, tutti i nuovi sistemi (Aura Glaciale, Dasher/Splitter, varianti Guardiani, boss finale, Santuario a 7 strutture, riepilogo di fine run, classifica, controlli di accessibilità) funzionano correttamente sia da desktop che da mobile.
 
 ## Prossimi passi possibili
 
-Vedi il documento di analisi completo (Priorità 2: bilanciamento/economia; Priorità 3: contenuti; Priorità 4: rifinitura) per l'elenco dettagliato delle migliorie ancora da valutare.
+Vedi il documento di analisi completo (Priorità 2: bilanciamento/economia; Priorità 3: contenuti; Priorità 4: rifinitura) per l'elenco dettagliato delle migliorie ancora da valutare, incluse le feature rimandate sopra.
