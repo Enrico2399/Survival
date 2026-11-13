@@ -107,6 +107,8 @@ Stima di impegno: S = meno di un'ora, M = qualche ora, L = sessione lunga. Tutto
 22. Livelli di difficoltà / "Maledizione" per più ricompense. ⏸️ *non implementato*
 23. Strutture del Santuario con effetti unici invece di "più Essenza". ✅ *in parte: la 7ª struttura (Cristallo dell'Eco) resta comunque un generatore di risorse, non un effetto unico*
 
+**Extra non previsto nel documento originale, aggiunto su richiesta:** nuova 5ª tab del Santuario, **"Albero"**, separata e aggiuntiva rispetto all'Altare (che resta invariato, griglia piatta originale). Contiene un vero albero di potenziamenti con un **Nucleo Arcano** centrale da risvegliare (100 ✨, +5% danno magico generale) e 3 rami con dipendenze radice → figlio: **Vitalità** 🩸 (Rubavita, generale: cura in base al danno inflitto → Rigenerazione Profonda, rigenerazione passiva), **Fulmini** ⚡ (Sovraccarico, +danno a Tempesta di Fulmini → Catena Prolungata, scariche extra garantite) e **Gelo** ❄️ (Gelo Profondo, +danno ad Aura Glaciale → Tempesta Glaciale, +raggio). Usa la stessa valuta (Essenza Arcana) dell'Altare; tutti i bonus sono reali e persistenti in gioco (non solo estetici). ✅
+
 ### Priorità 4 — rifinitura ("juice") — parzialmente completata
 
 24. Musica generativa con Web Audio e suoni distinti per ogni magia/fusione. ⏸️ *non implementato*

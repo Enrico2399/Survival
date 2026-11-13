@@ -9,7 +9,7 @@ Gioco browser single-player in stile "survivors-like" (bullet heaven, genere Vam
 3. Gli incantesimi sparano in automatico: il tuo compito è muoverti, raccogliere le gemme XP ed evitare i nemici.
 4. Quando sali di livello scegli una carta tra quelle proposte: **1 / 2 / 3** da tastiera, oppure clic/tap.
 5. Sconfiggi i Guardiani (mini-boss) per ottenere forzieri con potenziamenti garantiti.
-6. Alla fine della run, l'oro guadagnato si spende nel **Santuario** (progressione permanente tra una partita e l'altra): edifici, relitti e produzione passiva anche a gioco chiuso.
+6. Alla fine della run, l'oro guadagnato si spende nel **Santuario** (progressione permanente tra una partita e l'altra): edifici, **Albero delle Abilità**, relitti e produzione passiva anche a gioco chiuso.
 
 ## Salvataggio
 
@@ -62,6 +62,15 @@ Gioco browser single-player in stile "survivors-like" (bullet heaven, genere Vam
 - Riepilogo dettagliato di fine run: danno inflitto per arma, nemici uccisi per tipo
 - Storico delle scelte di livello (quali potenziamenti/fusioni hai preso) consultabile in pausa
 - Classifica locale (Top 5) delle run migliori, salvata sul dispositivo
+
+**Albero delle Abilità (nuova tab "Albero" del Santuario, separata dall'Altare):**
+- L'Altare resta esattamente come prima (griglia piatta dei 6 potenziamenti permanenti, nessuna modifica).
+- Nuova 5ª tab del Santuario con un vero albero di potenziamenti, acquistato con l'Essenza Arcana: un **Nucleo Arcano** centrale (100 ✨, +5% danno magico generale) che va risvegliato per sbloccare 3 rami tematici.
+  - **Vitalità** 🩸: Rubavita (recupera HP in base al danno inflitto, generale) → Rigenerazione Profonda (richiede Rubavita Grado 2)
+  - **Fulmini** ⚡: Sovraccarico (+danno a Tempesta di Fulmini) → Catena Prolungata (bersagli extra garantiti, richiede Sovraccarico Grado 3)
+  - **Gelo** ❄️: Gelo Profondo (+danno ad Aura Glaciale) → Tempesta Glaciale (+raggio, richiede Gelo Profondo Grado 3)
+- Ogni nodo figlio si sblocca solo quando il suo nodo radice raggiunge il grado richiesto, con un connettore visivo che mostra la dipendenza; tutti i rami richiedono il Nucleo già risvegliato.
+- I bonus sono reali e persistenti tra una run e l'altra: rubavita cura in combattimento, rigenerazione aumenta la rigenerazione passiva di HP, i bonus di Fulmini/Gelo aumentano rispettivamente il danno (e le scariche garantite) di Tempesta di Fulmini e il danno/raggio di Aura Glaciale.
 
 **Accessibilità:**
 - Interruttore "Riduci bagliore" (disattiva gli effetti `shadowBlur` per chi preferisce un'interfaccia più sobria o ha un dispositivo meno potente)
